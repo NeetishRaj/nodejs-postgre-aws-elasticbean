@@ -40,6 +40,7 @@ app.configure("development", function () {
   app.use(express.errorHandler());
 });
 
+// https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-nodejs.rds.html
 app.configure("production", function () {
   console.log("Using production settings.");
   app.set(
@@ -48,7 +49,7 @@ app.configure("production", function () {
       host: process.env.RDS_HOSTNAME,
       user: process.env.RDS_USERNAME,
       password: process.env.RDS_PASSWORD,
-      database: process.env.RDS_DATABASE,
+      database: process.env.RDS_DB_NAME,
       port: process.env.RDS_PORT,
     })
   );
