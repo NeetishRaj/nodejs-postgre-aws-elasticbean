@@ -6,3 +6,8 @@ https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_expr
 
 Make sure to follow these guidelines while setting up AWS RDS for your EB environment 
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-nodejs.rds.html
+
+Make sure to add the NODE_ENV=production environment variable
+```
+$ eb setenv NODE_ENV=production
+```
